@@ -1,24 +1,25 @@
-# PEV Charging Infrastructure Siting Based on Spatial-Temporal Traffic Flow Distribution
+# Estimation of Faults in DC Electrical Power Systems.
 
-In this project, we propose a spatial-temporal flow capturing location model. This model determines the locations of various types of charging facilities based on the spatial-temporal distribution of traffic flows. We utilize the dynamic traffic assignment model to estimate the time-varying traffic flows on the road transportation network. Then, we cluster the traffic flow dataset into distinct categories using the Gaussian mixture model and site each type of charging facilities to capture a specific traffic pattern. We formulate our siting model as an mixed integer linear programming (MILP) optimization problem. The model is evaluated based on two benchmark transportation networks, and the simulation results demonstrate effectiveness of the proposed model.
+Course project: ECE 602- Winter 2017
+
+The goal of this project is to replicate and analyze the estimation methods provided in [1]. It is noteworthy to say that the results provided in [1] was experimentally achieved, and do to lack of equipment we solely focus on simulation studies.
+
+The main goal of this paper is to estimate faults in a DC electric circuit via optimization methods. A DC electric circuit consists of sources, loads and switching elements. voltage and current measurements are implemented on some specific nodes in the system. 
 
 ## Files
-* [Technical details](ST-FCLMpaper.pdf) -contains the technical details of the ST-FCLM model.
-* [Main code](STFCLM.py) - contains the source code that interface with the traffic simulator, cluster the traffic dataset, and solve the optimization problem.
-* [Results analysis](STFCLM_Figures.ipynb) - contains the analysis of the output results and data visualization.
-* [Optimization model](STFCLMproblem.lp) - contains the optimization model in a way that is easier for humans to read. 
-* [Traffic simulation](SUMO) - contains the traffic simulation for the Nguyen-Dupuis and the Sioux
-Falls network transportation networks.
+* [Technical details](paper.pdf) -contains the technical details of the model.
+* [Main code](main.py) - contains the source code that solve the optimization problem.
+* [Results analysis](main.html) - contains the analysis of the output results and data visualization.
 
 ## Reference
 
-A. Abdalrahman and W. Zhuang, “PEV charging infrastructure siting based on spatial-temporal traffic flow distribution,” IEEE Trans. Smart Grid, 2019. [Source](https://ieeexplore.ieee.org/document/8630747)
+[1] D. Gorinevsky, S. Boyd and S. Poll, "Estimation of faults in DC electrical power system," 2009 American Control Conference, St. Louis, MO, 2009, pp. 4334-4339.
 
 ## Built With
 
-* [SUMO](https://www.dlr.de/ts/en/desktopdefault.aspx/tabid-9883/16931_read-41000/) - Traffic flow estimation
-* [Gurobi](http://www.gurobi.com/) - MILP optimization
+* [MATLAB]  
+* [CVX](http://cvxr.com/cvx/) - Convex optimization
 
 ## Authors
 
-* **Ahmed Abdalrahman** - University of Waterloo
+* **Ahmed Abdalrahman and Farid Farmani** - University of Waterloo
